@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://f4i5q10vm475"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_p2oc4"]
+[ext_resource type="Texture2D" uid="uid://ddt8ulcdnbenn" path="res://Sprites/Player/Idle1.png" id="2_odyww"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bgyww"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_odyww")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_p2oc4")
+speed = null
+friction = null
+acceleration = null
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bgyww")
