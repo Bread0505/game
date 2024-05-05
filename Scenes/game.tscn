@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://clpfqkpru50yx"]
+
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_dsd1q"]
+[ext_resource type="PackedScene" uid="uid://f4i5q10vm475" path="res://Scenes/player.tscn" id="2_afefd"]
+[ext_resource type="Script" path="res://Scenes/gamemanager.gd" id="2_p6qdu"]
+[ext_resource type="FontFile" uid="uid://c1lx1o8ewpdh8" path="res://fibberish.ttf" id="3_h68su"]
+[ext_resource type="PackedScene" uid="uid://how7803jsth6" path="res://Coin.tscn" id="4_0yjfj"]
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_dsd1q")
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_p6qdu")
+
+[node name="Label" type="Label" parent="GameManager"]
+offset_left = -142.0
+offset_top = -78.0
+offset_right = -102.0
+offset_bottom = -55.0
+theme_override_fonts/font = ExtResource("3_h68su")
+theme_override_font_sizes/font_size = 16
+text = "$0"
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_afefd")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+
+[node name="Coin3" parent="." instance=ExtResource("4_0yjfj")]
+position = Vector2(-103, 17)
+
+[node name="Coin" parent="." instance=ExtResource("4_0yjfj")]
+position = Vector2(27, -24)
+
+[node name="Coin2" parent="." instance=ExtResource("4_0yjfj")]
+position = Vector2(47, 51)
+
+[node name="Coin4" parent="." instance=ExtResource("4_0yjfj")]
+position = Vector2(-92, -13)
+
+[node name="Node" type="Node" parent="."]
