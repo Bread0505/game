@@ -4,15 +4,13 @@ this is my little crappy car building racing game first time I have ever used go
 
 ### Currently being worked on (hopefully)
 
-  - money system
+  - job(s) for the player
 
 #
 
 ### Todo
 
 - [ ] make a fully animated player
-      
-- [ ] money system
 
 - [ ] player house
 
@@ -29,6 +27,8 @@ this is my little crappy car building racing game first time I have ever used go
 - [x] Player movement
 
 - [x] Flipping player
+
+- [x] money system
 
 #
 
