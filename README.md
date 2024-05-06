@@ -30,7 +30,10 @@ this is my little crappy car building racing game first time I have ever used go
 
 - [x] money system
 
-#
+## Changelog
+
+5/6/2024
+made it possible to enter and leave the garage cool tool chest too hopefully i can make a bike or something today
 
 
 
