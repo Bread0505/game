@@ -20,6 +20,8 @@ this is my little crappy car building racing game first time I have ever used go
 
 - [ ] make player look good from both angles
 
+- [ ] fully decorated garage with cool enter and leave transition
+
 #
 
 ### Finished
@@ -29,6 +31,8 @@ this is my little crappy car building racing game first time I have ever used go
 - [x] Flipping player
 
 - [x] money system
+
+- [x] garage (mostly) 
 
 ## Changelog
 
