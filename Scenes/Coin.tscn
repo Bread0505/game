@@ -1,54 +1,54 @@
 [gd_scene load_steps=17 format=3 uid="uid://how7803jsth6"]
 
-[ext_resource type="Script" path="res://Coin.gd" id="1_n2krk"]
-[ext_resource type="Texture2D" uid="uid://t0jmhdiwroet" path="res://coin.png" id="2_m8asm"]
+[ext_resource type="Script" path="res://Scripts/Coin.gd" id="1_pomed"]
+[ext_resource type="Texture2D" uid="uid://t0jmhdiwroet" path="res://Sprites/coin.png" id="2_brsqh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oe07u"]
-atlas = ExtResource("2_m8asm")
+atlas = ExtResource("2_brsqh")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_52hld"]
-atlas = ExtResource("2_m8asm")
+atlas = ExtResource("2_brsqh")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pd0gy"]
-atlas = ExtResource("2_m8asm")
+atlas = ExtResource("2_brsqh")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mwi3h"]
-atlas = ExtResource("2_m8asm")
+atlas = ExtResource("2_brsqh")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_16dyr"]
-atlas = ExtResource("2_m8asm")
+atlas = ExtResource("2_brsqh")
 region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t2jx8"]
-atlas = ExtResource("2_m8asm")
+atlas = ExtResource("2_brsqh")
 region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0sim4"]
-atlas = ExtResource("2_m8asm")
+atlas = ExtResource("2_brsqh")
 region = Rect2(96, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_am8vq"]
-atlas = ExtResource("2_m8asm")
+atlas = ExtResource("2_brsqh")
 region = Rect2(112, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2ri8n"]
-atlas = ExtResource("2_m8asm")
+atlas = ExtResource("2_brsqh")
 region = Rect2(128, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ye1i"]
-atlas = ExtResource("2_m8asm")
+atlas = ExtResource("2_brsqh")
 region = Rect2(144, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_quevq"]
-atlas = ExtResource("2_m8asm")
+atlas = ExtResource("2_brsqh")
 region = Rect2(160, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yjobh"]
-atlas = ExtResource("2_m8asm")
+atlas = ExtResource("2_brsqh")
 region = Rect2(176, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1bdd5"]
@@ -99,7 +99,7 @@ animations = [{
 size = Vector2(8, 8)
 
 [node name="Coin" type="Area2D"]
-script = ExtResource("1_n2krk")
+script = ExtResource("1_pomed")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1bdd5")

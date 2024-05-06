@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://1wj6hxeqrg6m"]
+
+[ext_resource type="Texture2D" uid="uid://bpda8e08g0g5b" path="res://Sprites/Garage/GarageInterior.png" id="1_q88d2"]
+[ext_resource type="PackedScene" uid="uid://f4i5q10vm475" path="res://Scenes/player.tscn" id="1_qfots"]
+[ext_resource type="Texture2D" uid="uid://bama05amu53m8" path="res://Sprites/Garage/Toolbox2.png" id="3_l57vw"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_f18ce"]
+distance = -100.0
+
+[node name="garageinside" type="StaticBody2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_qfots")]
+position = Vector2(4, 37)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_q88d2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 8)
+zoom = Vector2(3.5, 3.5)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(1.49012e-08, 69)
+rotation = 3.13936
+shape = SubResource("WorldBoundaryShape2D_f18ce")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(-16, 5)
+rotation = -1.5708
+shape = SubResource("WorldBoundaryShape2D_f18ce")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(16, 4)
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_f18ce")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("WorldBoundaryShape2D_f18ce")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="Toolbox2" type="Sprite2D" parent="."]
+position = Vector2(-47, -11)
+texture = ExtResource("3_l57vw")

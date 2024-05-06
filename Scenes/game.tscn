@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://clpfqkpru50yx"]
+[gd_scene load_steps=7 format=3 uid="uid://clpfqkpru50yx"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_dsd1q"]
 [ext_resource type="PackedScene" uid="uid://f4i5q10vm475" path="res://Scenes/player.tscn" id="2_afefd"]
-[ext_resource type="Script" path="res://Scenes/gamemanager.gd" id="2_p6qdu"]
+[ext_resource type="Script" path="res://Scripts/gamemanager.gd" id="2_p6qdu"]
 [ext_resource type="FontFile" uid="uid://c1lx1o8ewpdh8" path="res://fibberish.ttf" id="3_h68su"]
-[ext_resource type="PackedScene" uid="uid://how7803jsth6" path="res://Coin.tscn" id="4_0yjfj"]
+[ext_resource type="PackedScene" uid="uid://b6ae3jkujdpyk" path="res://Scenes/garage.tscn" id="5_fsotl"]
+[ext_resource type="PackedScene" uid="uid://how7803jsth6" path="res://Scenes/Coin.tscn" id="6_ptvan"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_dsd1q")
@@ -13,30 +14,33 @@ script = ExtResource("1_dsd1q")
 unique_name_in_owner = true
 script = ExtResource("2_p6qdu")
 
-[node name="Label" type="Label" parent="GameManager"]
-offset_left = -142.0
-offset_top = -78.0
-offset_right = -102.0
-offset_bottom = -55.0
+[node name="CanvasLayer" type="CanvasLayer" parent="GameManager"]
+
+[node name="Label" type="Label" parent="GameManager/CanvasLayer"]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 52.0
+offset_bottom = 35.0
 theme_override_fonts/font = ExtResource("3_h68su")
 theme_override_font_sizes/font_size = 16
 text = "$0"
 
+[node name="Label2" type="Label" parent="GameManager/CanvasLayer"]
+offset_left = 476.0
+offset_top = 596.0
+offset_right = 589.0
+offset_bottom = 619.0
+scale = Vector2(2.04353, 2.04353)
+theme_override_fonts/font = ExtResource("3_h68su")
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_afefd")]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(4, 4)
+position_smoothing_enabled = true
 
-[node name="Coin3" parent="." instance=ExtResource("4_0yjfj")]
-position = Vector2(-103, 17)
+[node name="Coin" parent="." instance=ExtResource("6_ptvan")]
+position = Vector2(-111, 44)
 
-[node name="Coin" parent="." instance=ExtResource("4_0yjfj")]
-position = Vector2(27, -24)
-
-[node name="Coin2" parent="." instance=ExtResource("4_0yjfj")]
-position = Vector2(47, 51)
-
-[node name="Coin4" parent="." instance=ExtResource("4_0yjfj")]
-position = Vector2(-92, -13)
-
-[node name="Node" type="Node" parent="."]
+[node name="Garage" parent="." instance=ExtResource("5_fsotl")]
+position = Vector2(60, -122)

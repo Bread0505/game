@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6ae3jkujdpyk"]
+
+[ext_resource type="Script" path="res://Scripts/garageprompt2.gd" id="1_l071n"]
+[ext_resource type="Texture2D" uid="uid://dxt2xje5hkkhi" path="res://Sprites/Garage/GarageOutside.png" id="1_wyero"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p6j7t"]
+size = Vector2(45, 22)
+
+[node name="Garage" type="Area2D"]
+script = ExtResource("1_l071n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wyero")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(61.5, 111)
+shape = SubResource("RectangleShape2D_p6j7t")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
